@@ -1,0 +1,19 @@
+linearRegression Function Readme
+linearRegression is a MATLAB function that computes the linear regression of a data set, given the input x and y values. This function is intended to be used for simple linear regression, which is a statistical method for modeling the relationship between two variables by fitting a linear equation to the observed data.
+
+Inputs
+x: A vector representing the independent variable, i.e., x-values for our data set.
+y: A vector representing the dependent variable, i.e., y-values for our data set.
+Outputs
+fX: A vector containing x-values with outliers removed.
+fY: A vector containing y-values with outliers removed.
+slope: The slope of the linear regression line (y=mx+b).
+intercept: The intercept of the linear regression line (y=mx+b).
+Rsquared: R^2, a.k.a. coefficient of determination, which measures how well the linear regression model fits the data.
+
+Example Usage
+
+x = [1, 2, 3, 4, 5];
+y = [1.1, 2.5, 3.7, 5.3, 6.1];
+[fX, fY, slope, intercept, Rsquared] = linearRegression(x, y);
+In this example, we pass in two vectors representing the data set. The function will return fX and fY vectors with outliers removed, the slope and intercept of the linear regression line, and the R-squared value.
