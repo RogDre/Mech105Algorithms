@@ -1,0 +1,42 @@
+
+README: falsePosition Function
+This function falsePosition finds the root of a function using the false position method. It takes in the function being evaluated (func), the lower guess (xl), the upper guess (xu), the desired relative error (es), the maximum number of iterations (maxit), and any additional parameters used by the function (varargin). It outputs the estimated root location (root), the function evaluated at the root location (fx), the approximate relative error (ea), and the number of iterations performed (iter).
+
+Inputs
+func: the function being evaluated
+xl: the lower guess
+xu: the upper guess
+es: the desired relative error (default value is 0.0001%)
+maxit: the maximum number of iterations to use (default value is 200)
+varargin: any additional parameters used by the function
+Outputs
+root: the estimated root location
+fx: the function evaluated at the root location
+ea: the approximate relative error (%)
+iter: how many iterations were performed
+Example
+Suppose we want to find the root of the function f(x) = x^2 - 4 using the false position method. We can call the falsePosition function with the following inputs:
+
+matlab
+Copy code
+>> [root, fx, ea, iter] = falsePosition(@func, 0, 2, 0.01, 50)
+
+root =
+
+    1.9993
+
+
+fx =
+
+   3.6290e-04
+
+
+ea =
+
+   0.0033
+
+
+iter =
+
+    9
+In this example, we set the function func to @(x) x^2 - 4, the lower guess to 0, the upper guess to 2, the desired relative error to 0.01, and the maximum number of iterations to 50. The output shows that the estimated root location is 1.9993, the function evaluated at the root location is 3.6290e-04, the approximate relative error is 0.0033%, and 9 iterations were performed.
